@@ -11,7 +11,7 @@ const links = [
     ),
   },
   {
-    href: 'https://www.instagram.com',
+    href: 'https://www.instagram.com/rihan.webdev?igsh=MWJ4YjdlMGxlNThqbw==',
     label: 'Instagram',
     icon: (
       <svg className="w-7 hover:text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
