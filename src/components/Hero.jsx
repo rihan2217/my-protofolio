@@ -26,7 +26,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-[#1788ae] text-lg md:text-2xl italic mt-4">
-              Java Full Stack Developer
+              Full Stack Developer — MERN Stack
             </p>
 
             <p className="text-[#b8b8b8] mt-6 max-w-xl leading-relaxed text-sm md:text-base mx-auto md:mx-0">
