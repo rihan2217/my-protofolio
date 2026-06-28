@@ -1,59 +1,60 @@
 import React from "react";
 import profile from "../assets/images/profile.png";
 
-const skillCategories = [
-  {
-    label: "Frontend",
-    skills: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Tailwind CSS", "Bootstrap"],
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js", "Express.js", "PHP", "REST APIs", "JWT Auth", "Middleware"],
-  },
-  {
-    label: "Database",
-    skills: ["MongoDB", "Mongoose", "MySQL", "MongoDB Atlas"],
-  },
-  {
-    label: "Tools",
-    skills: ["Git", "GitHub", "Vercel", "Render", "Postman", "VS Code"],
-  },
-  {
-    label: "Familiar",
-    skills: ["Java", "Socket.io", "Redux", "EJS", "Multer"],
-  },
+const skills = [
+  { name: "HTML & CSS", level: 90, color: "#47afa1" },
+  { name: "JavaScript", level: 82, color: "#ffe578" },
+  { name: "Tailwind CSS", level: 85, color: "#47afa1" },
+  { name: "React.js", level: 80, color: "#ffe578" },
+  { name: "Node.js,Express.js", level: 85, color: "#ffe578" },
+  { name: "PHP", level: 70, color: "#ffe578" },
+  { name: "Java", level: 85, color: "#1788ae" },
+  { name: "MongoDB", level: 80, color: "#ffe578" },
+  { name: "MySQL / SQL", level: 75, color: "#fc815c" },
+  { name: "Git & GitHub", level: 78, color: "#fc815c" },
 ];
 
 const timeline = [
   {
-    year: "July 2024",
-    title: "Started Internship",
+    year: "June 2024",
+    title: "Started Coding Journey",
     description:
-      "Joined Blumart Global LLP as a Full Stack Developer — built and deployed 4 production websites independently.",
+      "Began learning programming fundamentals with Java, HTML, and CSS.",
   },
+
   {
     year: "December 2024",
     title: "Explored Full Stack Development",
     description:
       "Learned Java Servlets, JSP, SQL, and backend development concepts.",
   },
+
   {
     year: "February 2025",
     title: "Built Real Projects",
     description:
-      "Developed MERN social media app, e-commerce platform, and other full-stack applications.",
+      "Developed projects like Plant Kart, AnimeVerse, and other full-stack applications.",
   },
+
   {
     year: "May 2025",
     title: "Frontend & React Development",
     description:
       "Worked with React.js, Tailwind CSS, and modern JavaScript (ES6+).",
   },
+
+  {
+    year: "June 2025",
+    title: "Started First Internship",
+    description:
+      "Got selected for my first internship and gained real-world development experience.",
+  },
+
   {
     year: "Present",
-    title: "MERN Stack & Growing",
+    title: "MERN Stack & Job Search",
     description:
-      "Building full-stack projects, expanding into data analytics, and actively seeking opportunities.",
+      "Currently mastering the MERN stack while looking for frontend and full-stack developer opportunities.",
   },
 ];
 
@@ -66,100 +67,117 @@ export default function About() {
 
       {/* Bio + Photo Row */}
       <div className="flex flex-col md:flex-row items-center gap-12 mt-16">
+        {/* Avatar placeholder / initials */}
         <div className="flex-shrink-0">
           <div className="w-48 h-48 rounded-full bg-gradient-to-br from-[#1595b6] to-[#1f2667] flex items-center justify-center shadow-[0_0_60px_rgba(23,136,174,0.4)] border-4 border-[#1788ae] overflow-hidden">
-            <img src={profile} alt="Md Rihan" className="w-full h-full object-cover" />
+            <img
+              src={profile}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
+        {/* Bio text */}
         <div className="flex-1">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#1788ae] mb-4">
+          <h3 className="text-2xl md:text-3xl font-['Spartan'] font-bold text-[#1788ae] mb-4">
             Hi, I'm Md Rihan 👋
           </h3>
           <p className="text-sm md:text-base text-justify leading-relaxed mb-4 text-[#717070]">
-            I'm a{" "}
+            I'm a passionate{" "}
             <span className="text-[#1788ae] font-semibold">
-              Full Stack Developer
+              Java Full Stack Developer
             </span>{" "}
-            with hands-on experience building and deploying production web applications using the MERN stack and PHP. I've independently delivered 4 live client projects — from requirement gathering to deployment.
+            with a strong foundation in both frontend and backend technologies.
+            I love building clean, functional, and user-friendly web
+            applications that solve real-world problems.
+          </p>
+          <p className="text-sm md:text-base text-justify leading-relaxed mb-4 text-[#717070]">
+            My journey started with Java and gradually expanded into the modern
+            web ecosystem — React.js, Tailwind CSS, Spring Boot, and SQL
+            databases. I enjoy every layer of the stack, from crafting
+            pixel-perfect UIs to designing efficient backend APIs.
           </p>
           <p className="text-sm md:text-base text-justify leading-relaxed text-[#717070]">
-            I enjoy every layer of the stack — clean frontends, efficient APIs, and solid database design. Currently expanding into data analytics while continuing to build full-stack projects.
+            When I'm not coding, you'll find me exploring new technologies,
+            contributing to open source, or leveling up through online courses
+            and building personal projects.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-6">
-            {[
-              { value: "4", label: "Live Production Sites" },
-              { value: "3+", label: "Certificates" },
-              { value: "1+", label: "Years Learning" },
-              { value: "6mo", label: "Work Experience" },
-            ].map(({ value, label }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center bg-[#1a1a1a] border border-[#222] rounded-xl px-6 py-3"
-              >
-                <span className="text-2xl font-bold text-[#1788ae]">{value}</span>
-                <span className="text-xs text-[#999] mt-1">{label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Skills + Timeline */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-20">
-
-        {/* Skills — category tags */}
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold text-[#1788ae] mb-8 text-center">
-            Technical Skills
-          </h3>
-          <div className="space-y-5">
-            {skillCategories.map(({ label, skills }) => (
-              <div key={label} className="flex flex-col sm:flex-row sm:items-start gap-3">
-                <span className="text-xs font-bold text-[#1788ae] uppercase tracking-widest w-24 shrink-0 pt-1">
-                  {label}
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="text-xs px-3 py-1.5 rounded-full border border-[#1788ae33] bg-[#1788ae11] text-[#aaa] hover:border-[#1788ae] hover:text-[#1788ae] transition-colors duration-200"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Timeline */}
-        <div>
-          <h3 className="text-xl md:text-2xl font-bold text-[#1788ae] mb-10 text-center">
-            My Journey
-          </h3>
-          <div className="relative max-w-xl mx-auto">
-            <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-[#1788ae] opacity-30" />
-            <div className="space-y-8">
-              {timeline.map(({ year, title, description }, i) => (
-                <div key={i} className="flex gap-6 relative pl-14">
-                  <div className="absolute left-6 top-1 w-4 h-4 rounded-full border-2 border-[#1788ae] bg-[#111] -translate-x-1/2" />
-                  <div>
-                    <span className="text-xs font-bold text-[#1788ae] tracking-widest uppercase">
-                      {year}
-                    </span>
-                    <h4 className="font-bold text-base mt-0.5">{title}</h4>
-                    <p className="text-sm text-[#999] mt-1">{description}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="flex flex-col items-center bg-[#1a1a1a] border border-[#222] rounded-xl px-6 py-3">
+              <span className="text-2xl font-bold text-[#1788ae]">30+</span>
+              <span className="text-xs text-[#999] mt-1">Projects Built</span>
+            </div>
+            <div className="flex flex-col items-center bg-[#1a1a1a] border border-[#222] rounded-xl px-6 py-3">
+              <span className="text-2xl font-bold text-[#1788ae]">3+</span>
+              <span className="text-xs text-[#999] mt-1">Certificates</span>
+            </div>
+            <div className="flex flex-col items-center bg-[#1a1a1a] border border-[#222] rounded-xl px-6 py-3">
+              <span className="text-2xl font-bold text-[#1788ae]">2+</span>
+              <span className="text-xs text-[#999] mt-1">Years Learning</span>
+            </div>
+             <div className="flex flex-col items-center bg-[#1a1a1a] border border-[#222] rounded-xl px-6 py-3">
+              <span className="text-2xl font-bold text-[#1788ae]">~1</span>
+              <span className="text-xs text-[#999] mt-1">Years Experience</span>
             </div>
           </div>
         </div>
-
       </div>
+
+      {/* Skills */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
+      <div className="mt-16">
+        <h3 className="text-xl md:text-2xl font-bold text-[#1788ae] mb-8 text-center">
+          Technical Skills
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-1 gap-5 max-w-2xl mx-auto">
+          {skills.map(({ name, level, color }) => (
+            <div key={name}>
+              <div className="flex justify-between mb-1">
+                <span className="text-sm font-semibold">{name}</span>
+                <span className="text-sm" style={{ color }}>
+                  {level}%
+                </span>
+              </div>
+              <div className="w-full bg-[#222] rounded-full h-2">
+                <div
+                  className="h-2 rounded-full transition-all duration-1000"
+                  style={{ width: `${level}%`, backgroundColor: color }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Timeline */}
+      <div className="mt-16">
+        <h3 className="text-xl md:text-2xl font-bold text-[#1788ae] mb-10 text-center">
+          My Journey
+        </h3>
+        <div className="relative max-w-xl mx-auto">
+          {/* vertical line */}
+          <div className="absolute left-6 top-0 bottom-0 w-[2px] bg-[#1788ae] opacity-30" />
+
+          <div className="space-y-8">
+            {timeline.map(({ year, title, description }, i) => (
+              <div key={i} className="flex gap-6 relative pl-14">
+                {/* dot */}
+                <div className="absolute left-6 top-1 w-4 h-4 rounded-full border-2 border-[#1788ae] bg-[#111] -translate-x-1/2" />
+                <div>
+                  <span className="text-xs font-bold text-[#1788ae] tracking-widest uppercase">
+                    {year}
+                  </span>
+                  <h4 className="font-bold text-base mt-0.5">{title}</h4>
+                  <p className="text-sm text-[#999] mt-1">{description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
   );
 }
