@@ -31,7 +31,7 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="flex flex-col items-center pb-10 pt-6 border-t border-[#222]">
-      <p className="text-xs text-gray-400">MD RIHAN © 2025</p>
+      <p className="text-xs text-gray-400">MD RIHAN © 2026</p>
       <ul className="mx-auto flex items-center justify-center gap-6 text-[#b0b2c3] mt-4">
         {footerLinks.map(({ href, label, icon }) => (
           <li key={label}>
@@ -41,6 +41,7 @@ export default function Footer() {
           </li>
         ))}
       </ul>
+      <p className="text-xs text-gray-400">rihan17dev@gmail.com</p>
     </footer>
   )
 }
